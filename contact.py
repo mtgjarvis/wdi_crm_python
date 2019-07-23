@@ -46,6 +46,7 @@ class Contact:
       self.email = new_data
     elif attribute_to_update == 'note':
       self.note = new_data
+    return new_data
 
 
     """ This method should allow you to specify
@@ -88,8 +89,8 @@ class Contact:
     """Returns the full (first and last) name of the contact"""
     return (f'{self.first_name.capitalize} {self.last_name.capitalize}')
 
-  def delete(self, contact_to_delete):
-    Contact.contacts.remove(contact_to_delete)
+  def delete(contact_to_delete):
+    Contact.contacts.pop(contact_to_delete)
     """This method should delete the contact
     HINT: Check the Array class docs for built-in methods that might be useful here
     """

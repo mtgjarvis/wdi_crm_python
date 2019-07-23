@@ -59,7 +59,7 @@ class CRM:
     # contact_to_modify = Contact.find(contact_id)
     attribute_to_update = input('Please enter which attribute you would like to update: first name, last name, email, or note: ').lower()
     new_data = input(f'Enter the new info for {attribute_to_update}: ').lower()
-    Contact.contacts[contact_id].update(self, attribute_to_update, new_data)
+    Contact.contacts[contact_id - 1].update(attribute_to_update, new_data)
   #
   #
   def delete_contact(self):
